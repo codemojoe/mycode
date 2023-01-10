@@ -4,7 +4,7 @@
 
 def main():
     # create a list called list1
-    listAnimal = ["Bear", "Wolf", "Deer"]
+    listAnimal = ["Bee", "Cat", "Dog", "Ant", "Fox"]
 
     # display list1
     print(listAnimal)
