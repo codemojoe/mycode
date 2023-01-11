@@ -7,16 +7,18 @@ import random
 def main():
 
     #counter
-    count = 0
+    counter = 0
 
     #conditional until 5
-    while count < 5:
-        
-        count += 1
-        
-        #monster health
+    while counter < 5:
+        #monsterhealth
         monsterhealth = 3
+        
+        counter += 1
         print("The monster's health is ", monsterhealth)
+
+        #characterhealth
+        characterhealth = 5
 
         #roll 2 dice
         die1 = random.randint(1,6)
@@ -31,10 +33,10 @@ def main():
         print("Your miminum attack total must be: ", minimum)
         
         if monsterhealth > 0:
-        
             if minimum > total:
-                print("Your attack missed.")
-            
+                print("Your attack missed. The monster attacks you back.")
+                characterhealth -= 1
+                print("Your health is ", characterhealth)
             else:
                 monsterhealth -= 1
                 print("Your attack landed. The monster's health is ", monsterhealth)
