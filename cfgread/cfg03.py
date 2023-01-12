@@ -5,7 +5,7 @@ with open("vlanconfig.cfg", "r") as configfile:
     ## file line by line
     count = 0
     configlist = configfile.readlines()
-    for x in configfile:
+    for x in configlist:
         count += 1
 print(count)
 ## file was just auto closed (no more indenting)
