@@ -29,9 +29,6 @@ def main():
     print(cards)
 
     with open("fourth_ed_cards.set", "w") as fourthED_set:
-        for cardset in cardsset:  # loop across ALL of the sets of MTG cards (they are stored as dict objects)
-            print(f"{cardset.get('name')} -- {cardset.get('code')}", file=fourthED_set)  # write the data "we want"
-                                                                                    # into mtgfile
 
 if __name__ == "__main__":
     main()
