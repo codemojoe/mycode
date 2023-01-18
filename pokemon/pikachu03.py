@@ -55,6 +55,11 @@ def main():
     # being written into the data
     itemsdf.to_excel("pokemonitems.xlsx", index=False)
 
+    
+    # export list as plaintest and json
+    pokeson = itemsdf.to_json("pokeson.json", orient="records")
+    print("pokeson", pokeson)
+
     print("Gotta catch 'em all!")
 
 if __name__ == "__main__":
