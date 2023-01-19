@@ -19,23 +19,30 @@ def main():
     results = data['results']
     #print("Data['results']: ",results)
 
+    all_answers = []
+
     for result in results:
         print(result['question'])
 
         #trying to implment random to display random incorrect answer order // not working yet
         random_ans = random.randint(0,3)
+        
         time.sleep(2)
+        
+        correct_answer = result['correct_answer']
+        all_answers.append(correct_answer)
 
         #print incorrect and correct answers
         for incorrect_answer in result['incorrect_answers']:
-            print(incorrect_answer)
-        print(result['correct_answer'])
+            all_answers.append(incorrect_answer)
         
-        #wait 5 seconds
-        time.sleep(5)
+        print(all_answers)
+        #clear list for new results object answers
+        all_answers.clear()
 
         #print correct answer after 5 seconds
         print("The correct answer is: \n")
+        time.sleep(5)
         print(result['correct_answer'])
         
         print()
